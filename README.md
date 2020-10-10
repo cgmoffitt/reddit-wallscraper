@@ -8,7 +8,7 @@ Google Drive URL for Presentation: https://drive.google.com/file/d/1G11pi4g7jpeK
 ##Brief summary
 Reddit-Wallscraper scrapes reddit to find the current top 25 wallpapers and downloads them locally to a wallpapers directory\
 Here is an example wallpaper that was scraped from reddit:
-!(examples/WindowsVistaimg31NORTHERNLIGHTSDENALINATIONALPARKALASKA.png)
+![an example wallpaper](examples/WindowsVistaimg31NORTHERNLIGHTSDENALINATIONALPARKALASKA.png)
 
 
 #Requirements:
