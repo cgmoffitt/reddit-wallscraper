@@ -1,6 +1,5 @@
 # reddit-wallscraper
 
-Class: CS41\
 Date: March 11, 2020\
 Project Partners: Christopher Moffitt & Elizabeth Fitzgerald\
 Google Drive URL for Presentation: https://drive.google.com/file/d/1G11pi4g7jpeK87NpjaQiVwEEr8vu6Rvx/view\
