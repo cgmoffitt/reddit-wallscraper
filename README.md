@@ -1,11 +1,17 @@
-# reddit-wallscraper
+#reddit-wallscraper
 
-Class: CS41
-Date: March 11, 2020
-Project Partners: Elizabeth Fitzgerald & Christopher Moffitt
-Google Drive URL for Presentation: https://drive.google.com/file/d/1G11pi4g7jpeK87NpjaQiVwEEr8vu6Rvx/view
+Class: CS41\
+Date: March 11, 2020\
+Project Partners: Christopher Moffitt & Elizabeth Fitzgerald\
+Google Drive URL for Presentation: https://drive.google.com/file/d/1G11pi4g7jpeK87NpjaQiVwEEr8vu6Rvx/view\
 =========================================
-Requirements:
+##Brief summary
+Reddit-Wallscraper scrapes reddit to find the current top 25 wallpapers and downloads them locally to a wallpapers directory\
+Here is an example wallpaper that was scraped from reddit:
+!(examples/WindowsVistaimg31NORTHERNLIGHTSDENALINATIONALPARKALASKA.png)
+
+
+#Requirements:
 -------------------------
 Simply download the code as is, and then run the main python script entitled wallscraper.py and the command line argument (wallpapers).
 ex:
@@ -18,11 +24,11 @@ $ launchctl load ~/Library/LaunchAgents/wallpapers.plist
 $ launchctl start wallpapers
 
 =========================================
-# Technical Details:
+#Technical Details:
 -------------------------
 This project performs several tasks. It scrapes data, downloads that data, avoids downloading the same image twice, allows for command line utility, and periodically runs itself. Each of these tasks was made up of smaller parts that came together to make it whole.
 -------------------------
-Task 1: Scraping Data
+##Task 1: Scraping Data
 -------------------------
 (A) Better familiarize ourselves with JSON objects and how to work with them
  --
@@ -34,7 +40,7 @@ Task 1: Scraping Data
  -- In order to do this, we had to organize the collected JSON data into a single, neat dictionary in the __init__ function. The dictionary only collects certain attributes (those in the attr list). With these attributes in mind, the function goes through each post characteristic scraped from the JSON data, and stores only the desired attributes in a dictionary. If a post lacks a particular attribute, then the attribute is assigned the value of None.
 
 -------------------------
-# Task 2: Downloading Data
+##Task 2: Downloading Data
 -------------------------
 (A) Implement the download function in the RedditPost class (moderate)
  -- The download function only runs on posts whose urls contain the string ".jpg" or ".png"
@@ -52,7 +58,7 @@ Task 1: Scraping Data
  -- Once we downloaded one image correctly, we simply ran all the RedditPost objects through a for loop in the main function.
 
 -------------------------
-# Task 3: Wallpaper Deduplication
+##Task 3: Wallpaper Deduplication
 -------------------------
 (A) Keep track of previously seen images
  -- In order to keep track of previously seen images across different instances of the program, we used the pickle package.
@@ -62,7 +68,7 @@ Task 1: Scraping Data
  -- With this object, we can load it any time we're saving a new post, scan through it to make sure there are no matching content, then save the new wallpaper's content to the list before dumping the list back into the pickle object.
 
 -------------------------
-# Task 4: Implementing Command Line Utility
+##Task 4: Implementing Command Line Utility
 -------------------------
 (A) Allow the user to specify which subreddit posts to download through command line arguments
  -- We did this by importing the sys package
